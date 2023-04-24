@@ -1,0 +1,35 @@
+const config = {
+  name: "infobot",
+  aliases: ["in4", "bot", "info"],
+  description: "check info bot",
+  cooldown: 7,
+  credits: `
+  Code: Xavia Team 
+  Mods: Tan Phat`
+};
+
+function formatDuration(duration) {
+  const hours = Math.floor(duration / 3600);
+  const minutes = Math.floor((duration - hours * 3600) / 60);
+  const seconds = Math.floor(duration - hours * 3600 - minutes * 60);
+  return `${hours}h ${minutes}m ${seconds}s`;
+}
+
+async function handlePingAndUptime({ message }) {
+  try {
+    const timeStart = Date.now();
+    await message.send("");
+    const timeEnd = Date.now();
+    const pingResponse = `Pong! ${timeEnd - timeStart}ms`;
+
+    const uptime = formatDuration(process.uptime());
+    const uptimeResponse = `Uptime: ${uptime}`;
+
+    message.reply(`
+    ${pingResponse}\n${uptimeResponse}`);
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+export { config, handlePingAndUptime };

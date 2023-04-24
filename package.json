@@ -1,0 +1,55 @@
+{
+  "name": "cindybot",
+  "version": "2.1.2",
+  "description": "A Facebook Messenger Bot",
+  "main": "index.js",
+  "type": "module",
+  "engines": {
+    "node": ">=16"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "startDev": "node --trace-warnings --experimental-import-meta-resolve --expose-gc core/_build.js"
+  },
+  "keywords": [
+    "cindybot",
+    "fca-unofficial",
+    "facebook-chat-api",
+    "chatbot",
+    "facebook",
+    "messenger"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/XaviaTeam/XaviaBot.git"
+  },
+  "author": "dhieu",
+  "license": "MIT",
+  "dependencies": {
+    "@replit/database": "",
+    "@xaviabot/fca-unofficial": "",
+    "axios": "",
+    "canvas": "",
+    "cors": "",
+    "cron": "",
+    "crypto-js": "",
+    "dotenv": "",
+    "express": "",
+    "express-rate-limit": "",
+    "ffmpeg-static": "",
+    "fluent-ffmpeg": "",
+    "form-data": "",
+    "helmet": "",
+    "js-yaml": "",
+    "langdetect": "",
+    "moment-timezone": "",
+    "mongoose": "",
+    "node-cron": "",
+    "node-fetch": "",
+    "openai": "",
+    "semver": "",
+    "string-similarity": "",
+    "wikijs": "",
+    "ytdl-core": ""
+  }
+}
